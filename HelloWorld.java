@@ -27,8 +27,8 @@ public class HelloWorld{
 			System.out.println(i);
 		}
 		
-		System.out.prinltn("----------------------------");
-		System.out.prinltn("Emp Id " + emp.empId);
+		System.out.println("----------------------------");
+		System.out.println("Emp Id " + emp.empId);
 		System.out.println("Emp Name " + emp.empName);
 		
 		
