@@ -1,0 +1,15 @@
+package com.fannie.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.fannie.utility.DriverFactory;
+import com.fannie.utility.DriverNames;
+
+public class FlightPagePOM {
+	private static WebElement element;
+	
+	public static WebElement clickFlightTab(){
+		WebDriver driver = DriverFactory.getDriver(DriverNames.CHROME);
+	}
+}

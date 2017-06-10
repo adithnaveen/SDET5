@@ -1,0 +1,11 @@
+package com.fannie.step;
+
+import cucumber.api.java.en.Given;
+
+public class CreditScoreStep {
+// step defn to go here 
+	
+	@Given("Employee has a credit score")
+	public void employee_has_a_credit_score(){}
+	
+}

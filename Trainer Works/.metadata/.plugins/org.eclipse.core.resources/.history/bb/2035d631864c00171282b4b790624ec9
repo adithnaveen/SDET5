@@ -1,0 +1,21 @@
+package com.runner;
+
+import org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features={"features/com/fannie"}, 
+		glue={"com.fannie.step"},
+		plugin={"pretty"}, 
+		// output on console 
+		monochrome=true, 
+		tags={"@Sanity"}
+)
+
+public class TestRunner  extends AbstractTestNGCucumberTests{
+
+}

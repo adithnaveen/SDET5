@@ -1,0 +1,7 @@
+package com.fannie.day2;
+
+public class SorterNumber {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,14 @@
+package com.fannie.emp;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class EmpDaoTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

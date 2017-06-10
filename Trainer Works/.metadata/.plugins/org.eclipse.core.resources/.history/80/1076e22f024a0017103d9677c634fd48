@@ -1,0 +1,19 @@
+package com.fannie.basic;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.fannie.utility.Driver;
+
+public class Test02 {
+	public static void main(String[] args) {
+		WebDriver driver ; 
+		
+		System.setProperty(Driver.CHROME, Driver.CHROME_PATH);
+		
+		driver = new ChromeDriver();
+		
+		String baseURL = "http://naveenks.com/selenium/LoginForm.html";
+		
+	}
+}

@@ -1,0 +1,23 @@
+package com.fannie.basic;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Test01 {
+	public static void main(String[] args) {
+		// Load The Driver 
+		
+		WebDriver driver ;
+		
+		System.setProperty(key, 
+		"C:\\Software\\SDET5-SeleniumSoftware\\driver\\geckodriver-v0.16.1-win64\\geckodriver.exe");
+		
+		driver= new FirefoxDriver();
+		
+		// Open the browser for the driver 
+		
+		// do the task 
+		
+		// close the browser 
+	}
+}

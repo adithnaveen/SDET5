@@ -1,0 +1,11 @@
+package com.fannie.day2;
+
+public class ExceptionEx1 {
+	public static void main(String[] args) {
+		int res = 10/ 5; 
+		
+		System.out.println("Res " + res);
+		
+		System.out.println("I'm some business logic... ");
+	}
+}

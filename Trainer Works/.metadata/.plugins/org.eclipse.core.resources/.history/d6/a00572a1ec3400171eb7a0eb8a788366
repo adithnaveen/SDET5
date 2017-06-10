@@ -1,0 +1,9 @@
+package com.fannie.day2;
+
+public class SorterNumber {
+	public static void main(String[] args) {
+		int [] nums = {23,4,3,12,5,6,34,66,33,11,565,88};
+		
+		
+	}
+}

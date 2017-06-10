@@ -1,0 +1,12 @@
+Feature: Login Feature 
+
+Scenario:
+	Given username and password 
+	# there shall be values which can be passed 
+	|login  | pwd |
+	|larry  | larrypwd| 
+	|harry  | harrypwd|
+	|peter  | peterpwd| 
+	When login successful 
+	Then show inbox  
+	

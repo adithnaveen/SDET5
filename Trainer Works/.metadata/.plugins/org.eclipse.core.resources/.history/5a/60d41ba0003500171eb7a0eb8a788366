@@ -1,0 +1,22 @@
+package com.fannie.day2;
+
+public class ExceptionEx1 {
+	public static void main(String[] args) {
+		try{
+			
+		int num1 = Integer.parseInt(args[0]);
+		int num2 = Integer.parseInt(args[1]);
+		
+		int res =  num1 / num2 ; 
+		
+		System.out.println("Res " + res);
+		}catch(NumberFormatException e){
+			System.out.println("Hey please dont enter chars");
+		}catch(ArithmeticException ae){
+			System.out.println("You tried dividing by Zero please check");
+		}catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Did you forget to pass param... ");
+		}
+		System.out.println("I'm some business logic... ");
+	}
+}

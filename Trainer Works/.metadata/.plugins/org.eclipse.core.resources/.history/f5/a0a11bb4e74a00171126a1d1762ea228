@@ -1,0 +1,70 @@
+package com.fannie.generic;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.fannie.generics.GenericMethods;
+import com.fannie.utility.Driver;
+import com.fannie.utility.WaitTypes;
+
+public class DatePickerTest {
+
+	WebDriver driver ; 
+	String baseURL;
+	GenericMethods genericMethod; 
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.setProperty(Driver.CHROME, Driver.CHROME_PATH);
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		driver = new ChromeDriver();
+	    // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
+		baseURL = "https://www.expedia.com/";
+		genericMethod = new GenericMethods(driver);
+		driver.get(baseURL);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(3000);
+		driver.quit();
+	}
+	
+	
+
+	@Test
+	public void test() {
+		
+		
+		// click departing text box 
+		// flight-departing-hp-flight
+		
+		genericMethod.getElement("flight-departing-hp-flight", "id").click();
+		
+		String locator = "//*[@id='flight-departing-wrapper-hp-flight']"
+				+ "/div/div/div[2]/table/tbody/tr/td/button[text()='10']";
+
+		
+		if(genericMethod.checkSingleEntry(locator, type)){
+			
+		WebElement departDate = 
+				genericMethod.getElement(locator, type);
+		
+		departDate.click();
+		}else{
+			System.out.println("Too many entries of the locator...");
+			// assertFalse(false);
+		}
+	}
+
+}

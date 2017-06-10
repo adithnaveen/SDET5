@@ -1,0 +1,31 @@
+package com.fannie.emp;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.fannie.beans.Employee;
+import com.fannie.contract.IEmpDAO;
+import com.fannie.dao.EmpDAO;
+
+import junit.framework.Assert;
+
+public class EmpDaoTest {
+
+	Employee emp;
+	IEmpDAO dao;
+	@Before
+	public void beforeInsertTest(){
+		 emp = new Employee(201, "Kawsar", 20000, "kawsar@fannie.com");
+		 dao = new EmpDAO();
+	}
+	@Test
+	public void empInsertTest(){
+
+		
+		Assert.assertEquals(false, dao.insertEmp(emp));
+		
+	}
+
+}

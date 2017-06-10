@@ -1,0 +1,25 @@
+package com.fannie.day2;
+
+public class ExceptionEx3 {
+	
+	public static void checkCreditScore(int cs, String name){
+		if(cs < 400){
+			// throw an exception 
+			throw new RuntimeException
+				("Sorry less than 400 is not processed, Mr/Ms/Mrs :" + 
+						name);
+		} if(cs >= 400 && cs < 500){
+			
+		}
+		
+		else{
+			System.out.println("We are good to go, Mr/Ms/Mrs :" + name);
+		}
+	}
+	
+	public static void main(String[] args) {
+	
+		checkCreditScore(344, "Harry");
+		
+	}
+}

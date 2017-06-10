@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="test">
+	<test name="Sanity">
+		<packages>
+		<!--  step is java code  -->
+			<package name="com.fannie.step"/>
+		<!--  is java code, junit or testng -->
+			<package name="com.runner"/>
+		</packages>
+	</test>
+</suite>

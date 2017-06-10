@@ -1,0 +1,17 @@
+package com.fannie.utility;
+
+import org.openqa.selenium.WebDriver;
+
+/// this class shall have explicit wait for any location 
+// any type on either presenct, visibility etc 
+public class WaitTypes {
+	private WebDriver driver;
+	
+	public WaitTypes(WebDriver driver){
+		this.driver = driver;
+	}
+	
+	
+	// we will have methods which returns the WebElement 
+	// on demand of explicit wait 
+}

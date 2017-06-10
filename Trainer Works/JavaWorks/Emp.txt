@@ -1,0 +1,6 @@
+Emp Id 102
+Emp Name peter
+Emp Sal 12121.0
+Emp Id 103
+Emp Name Abdul
+Emp Sal 2000.0

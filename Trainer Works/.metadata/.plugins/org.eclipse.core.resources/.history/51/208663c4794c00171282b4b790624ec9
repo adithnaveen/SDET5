@@ -1,0 +1,7 @@
+Feature: Login Feature 
+
+Scenario:
+	Given username and password 
+	When login successful 
+	Then show inbox  
+	

@@ -1,0 +1,21 @@
+package com.fannie.day2;
+
+public class StaticEx1 {
+	
+	static int snum1 = 100;
+	
+	// when we say as static, to access this method 
+	// crating an object is not required, and this method 
+	// is available by reference only no by 
+	// Instantiation, doing so will not even create an object 
+	// all statics are singleton (one instance only)
+	public static int add(int num1,  int num2){
+		System.out.println("SNum1 " + snum1);
+		return num1 + num2;
+	}
+	
+	public static void main(String[] args) {
+		int res = add(10, 20);
+		System.out.println("Result " + res);
+	}
+}

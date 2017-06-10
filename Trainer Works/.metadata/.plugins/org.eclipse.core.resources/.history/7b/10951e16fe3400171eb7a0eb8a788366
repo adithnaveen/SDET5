@@ -1,0 +1,7 @@
+package com.fannie.day2;
+
+public class ExceptionEx1 {
+	public static void main(String[] args) {
+		
+	}
+}

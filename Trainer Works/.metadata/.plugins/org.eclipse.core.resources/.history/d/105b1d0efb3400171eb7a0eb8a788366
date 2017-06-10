@@ -1,0 +1,15 @@
+package com.fannie.day2;
+
+
+
+abstract class Hi{
+	public abstract void sayHi();
+}
+
+public class PersonSorterTemplate {
+
+	public static void sortOnNameAsc(Person [] pers){
+
+		
+	}
+}

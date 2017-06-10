@@ -1,0 +1,41 @@
+package com.fannie.basics;
+
+import static org.junit.Assert.*;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.fannie.utility.Driver;
+
+public class Test04 {
+	WebDriver driver ; 
+	String baseURL;
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.setProperty(Driver.CHROME, Driver.CHROME_PATH);
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		driver = new ChromeDriver();
+	     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
+		baseURL = "http://google.com";
+		driver.get(baseURL);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

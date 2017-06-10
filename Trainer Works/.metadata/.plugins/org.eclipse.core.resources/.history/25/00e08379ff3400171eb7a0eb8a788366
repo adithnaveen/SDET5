@@ -1,0 +1,17 @@
+package com.fannie.day2;
+
+public class ExceptionEx1 {
+	public static void main(String[] args) {
+		try{
+		int num1 = Integer.parseInt(args[0]);
+		int num2 = Integer.parseInt(args[1]);
+		
+		int res =  num1 / num2 ; 
+		
+		System.out.println("Res " + res);
+		}catch(Exception e){
+			System.out.println("message : " + e);
+		}
+		System.out.println("I'm some business logic... ");
+	}
+}

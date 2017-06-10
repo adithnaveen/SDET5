@@ -1,0 +1,7 @@
+package com.fannie.utility;
+
+public interface Driver {
+	String CHROME ="webdriver.chrome.driver"; 
+	String FIREFOX ="webdriver.firefox.marionette"; 
+	String IE ="webdriver.ie.driver";
+}

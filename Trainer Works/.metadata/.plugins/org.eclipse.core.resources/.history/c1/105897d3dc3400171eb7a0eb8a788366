@@ -1,0 +1,12 @@
+package com.fannie.day2;
+
+public class Account {
+
+	private int accId;
+	private double balance; 
+	private String custName;
+	
+	
+	
+	
+}

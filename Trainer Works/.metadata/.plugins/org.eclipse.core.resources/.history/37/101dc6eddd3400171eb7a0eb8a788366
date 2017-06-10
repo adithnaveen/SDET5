@@ -1,0 +1,18 @@
+package com.fannie.day2;
+
+public class Account {
+
+	private int accId;
+	private double balance; 
+	private String custName;
+	
+	
+	public Account(double balance, String custName) {
+		super();
+		this.balance = balance;
+		this.custName = custName;
+	}
+	
+	
+	
+}

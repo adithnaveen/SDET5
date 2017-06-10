@@ -1,0 +1,22 @@
+package com.fannie.day2;
+
+public class PersonalLoan implements BankLoan{
+
+
+	@Override
+	public void loanAmount(int amount) {
+		System.out.println("Loan Amount is " + amount);
+	}
+
+	@Override
+	public void repay(int amount) {
+		System.out.println("You Repay " + amount);
+		
+	}
+
+	@Override
+	public void foreClosure() {
+		System.out.println("You opted for ForeClosure");
+	}
+
+}

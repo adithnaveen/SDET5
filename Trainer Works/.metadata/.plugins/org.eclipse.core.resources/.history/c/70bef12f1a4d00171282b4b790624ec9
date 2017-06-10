@@ -1,0 +1,16 @@
+@Smoke
+Feature: To sanction Loan for the customer
+
+# this is my comment 
+
+Scenario: To issue the loan for the customer who is full time govt emp
+	Given Employee has a credit score 
+	And according to bank standard
+	# we say full, part, contractor, consultant with timed variable 
+	When Customer has "<timed>" time work
+	# it shall be like govt, private or semigovt with officetype variable  
+	And in "<officetype>"office 
+	Then Sanction loan 
+	# number of years to repay 
+	But should repay within "<noofyears>" years   
+	

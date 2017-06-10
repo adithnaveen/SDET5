@@ -1,0 +1,15 @@
+package com.fannie.basic;
+
+import org.openqa.selenium.WebDriver;
+
+import com.fannie.utility.Driver;
+
+public class Test02 {
+	public static void main(String[] args) {
+		WebDriver driver ; 
+		
+		System.setProperty(Driver.CHROME, Driver.CHROME_PATH);
+		
+		
+	}
+}

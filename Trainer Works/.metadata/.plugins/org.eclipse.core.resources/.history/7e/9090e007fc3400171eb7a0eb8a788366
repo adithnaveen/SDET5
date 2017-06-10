@@ -1,0 +1,30 @@
+package com.fannie.day2;
+
+import java.util.Arrays;
+
+public class PersonSorter {
+	public static void main(String[] args) {
+		Person[] pers = new Person[4];
+
+		pers[0] = new Person(34, "Parag", 3434);
+		pers[1] = new Person(12, "Sunitha", 7653);
+		pers[2] = new Person(344, "Lakshmi", 3344);
+		pers[3] = new Person(88, "Lisa", 4433);
+
+		for (Person p : pers) {
+			System.out.println(p);
+		}
+
+		System.out.println("After sort ");
+		System.out.println("-----------------------------------");
+
+		// Arrays.sort(pers);
+
+		PersonSorterTemplate.sortOnIdDesc(pers);
+
+		for (Person p : pers) {
+			System.out.println(p);
+		}
+
+	}
+}

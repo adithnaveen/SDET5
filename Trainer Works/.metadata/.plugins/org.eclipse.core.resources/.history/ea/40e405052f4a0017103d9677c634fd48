@@ -1,0 +1,63 @@
+package com.fannie.basics;
+
+
+// Program to show parameterization with 
+// expedia.com 
+
+
+import static org.junit.Assert.*;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.fannie.utility.Driver;
+
+@RunWith(Parameterized.class)
+public class Test06 {
+
+	private String fltSrc;
+	private String fltDest; 
+	private String deptDate; 
+	private String arrDate;
+	private int noOfAdults;
+
+	WebDriver driver ; 
+	String baseURL;
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.setProperty(Driver.CHROME, Driver.CHROME_PATH);
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		driver = new ChromeDriver();
+	     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
+		baseURL = "http://html.com/attributes/select-multiple/";
+		baseURL1 ="https://www.expedia.com/";
+		baseURL2="http://naveenks.com/selenium/RegForm.html";
+	}
+
+
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(3000);
+		driver.quit();
+	}
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

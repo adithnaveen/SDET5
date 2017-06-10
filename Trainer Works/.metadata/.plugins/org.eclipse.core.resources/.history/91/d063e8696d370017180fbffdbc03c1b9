@@ -1,0 +1,25 @@
+package com.fannie.emp;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import com.fannie.beans.Employee;
+import com.fannie.contract.IEmpDAO;
+import com.fannie.dao.EmpDAO;
+
+import junit.framework.Assert;
+
+public class EmpDaoTest {
+
+
+	@Test
+	public void empInsertTest(){
+		Employee emp = new Employee(200, "Kawsar", 20000, "kawsar@fannie.com");
+		IEmpDAO dao = new EmpDAO();
+		
+		Assert.assertEquals(true, dao.insertEmp(emp));
+		
+	}
+
+}

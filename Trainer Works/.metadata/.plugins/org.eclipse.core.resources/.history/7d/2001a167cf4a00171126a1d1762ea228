@@ -1,0 +1,42 @@
+package com.fannie.generics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class GenericMethods {
+	WebDriver driver ; 
+	
+	public GenericMethods(WebDriver driver){
+		this.driver = driver;
+	}
+	
+	
+	/**
+	 * 
+	 * @param locator 
+	 * @param type
+	 * @see type is id, name, xpath, text, partialtext
+	 * @see locator will be the element to be found on DOM 
+	 * @return  WebElement
+	 * 
+	 */
+	public WebElement getElement(String locator, String type){
+		WebElement element  = null;
+		type = type.toLowerCase();
+		
+		if(type.equals("id")){
+			element  =  this.driver.findElement(By.id(locator));
+		} else if(type.equals("css")){
+			element = driver.findElement(By.cssSelector(locator));
+		}else if (type.equals("name")){
+			element  = driver.findElement(By.name(locator));
+		}else if(type.equals("xpath")){
+			element = driver.findElement(By.xpath(locator));
+		}
+		
+		return element;
+	}
+	
+	
+}

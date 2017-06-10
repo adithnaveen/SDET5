@@ -1,0 +1,37 @@
+package com.fannie.basic;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Test01 {
+	public static void main(String[] args) {
+		// Load The Driver 
+		
+		WebDriver driver ;
+		
+		System.setProperty("webdriver.gecko.driver", 
+		
+				"C:\\Software\\SDET5-SeleniumSoftware\\driver\\geckodriver-v0.16.1-win64\\geckodriver.exe");
+		
+		driver= new FirefoxDriver();
+		
+		
+		// Open the browser for the driver
+		String baseUrl = "http://google.com";
+		driver.get(baseUrl);
+		// do the task 
+		System.out.println("Title  -> " + driver.getTitle());
+		
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// close the browser 
+		driver.close();
+	
+	}
+}

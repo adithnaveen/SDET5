@@ -1,0 +1,18 @@
+package com.fannie.basic;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Test01 {
+	public static void main(String[] args) {
+		// Load The Driver 
+		
+		WebDriver driver = new FirefoxDriver();
+		
+		// Open the browser for the driver 
+		
+		// do the task 
+		
+		// close the browser 
+	}
+}

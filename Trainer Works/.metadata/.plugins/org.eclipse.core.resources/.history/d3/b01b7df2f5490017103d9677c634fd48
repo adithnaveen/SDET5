@@ -1,0 +1,13 @@
+package com.fannie.basic;
+
+public class Test01 {
+	public static void main(String[] args) {
+		// Load The Driver 
+		
+		// Open the browser for the driver 
+		
+		// do the task 
+		
+		// close the browser 
+	}
+}

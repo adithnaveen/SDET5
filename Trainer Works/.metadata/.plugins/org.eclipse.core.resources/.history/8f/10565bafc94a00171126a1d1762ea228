@@ -1,0 +1,7 @@
+package com.fannie.utility;
+
+/// this class shall have explicit wait for any location 
+// any type on either presenct, visibility etc 
+public class WaitTypes {
+
+}

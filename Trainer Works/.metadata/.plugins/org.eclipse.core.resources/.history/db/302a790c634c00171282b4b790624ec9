@@ -1,0 +1,14 @@
+Feature: To sanction Loan for the customer
+
+# this is my comment 
+
+Scenario: To issue the loan for the customer who is full time govt emp
+	Given Employee has a credit score 
+	And according to bank standard 
+	When Customer has full time work 
+	And in govt office 
+	
+	Then Sanction loan 
+	But should repay within 5 years   
+	
+	

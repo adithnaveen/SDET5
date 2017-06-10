@@ -1,0 +1,12 @@
+package com.fannie.day2;
+
+public class PersonSorter {
+	public static void main(String[] args) {
+		Person [] pers = new Person[4];
+		
+		pers[0] = new Person(34, "Parag", 3434);
+		pers[1] = new Person(12, "Sunitha", 2323);
+		pers[2] = new Person(344, "Lakshmi", 3344);
+		pers[3] = new Person(88, "Lisa", 4433);
+	}
+}

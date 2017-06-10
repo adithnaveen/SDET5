@@ -1,0 +1,20 @@
+package com.fannie.generics;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class GenericMethods {
+	WebDriver driver ; 
+	
+	public GenericMethods(WebDriver driver){
+		this.driver = driver;
+	}
+	
+	
+	
+	public WebElement getElement(String locator, String type){
+		
+	}
+	
+	
+}

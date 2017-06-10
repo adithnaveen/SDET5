@@ -1,0 +1,13 @@
+package com.fannie.day2;
+
+import java.util.Arrays;
+
+public class PersonSorterTemplate {
+
+	public static void sortOnNameAsc(Person [] pers){
+		
+		Arrays.sort(pers);
+
+		
+	}
+}

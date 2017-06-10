@@ -1,0 +1,22 @@
+package com.fannie.day2;
+
+public class CarLoan implements BankLoan {
+
+	@Override
+	public void loanAmount(int amount) {
+		
+	}
+
+	@Override
+	public void repay(int amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void foreClosure() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

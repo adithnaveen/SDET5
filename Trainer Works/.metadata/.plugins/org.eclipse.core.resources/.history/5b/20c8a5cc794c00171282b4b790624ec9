@@ -1,0 +1,7 @@
+Feature: Login Feature 
+
+Scenario:
+	Given peter and harry 
+	When login successful 
+	Then show inbox  
+	

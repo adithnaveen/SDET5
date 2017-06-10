@@ -1,0 +1,16 @@
+package com.fannie.day2;
+
+public class ExceptionEx2 {
+	public static void main(String[] args) {
+		try{
+			System.out.println("Connect to db");
+			return ;
+		}catch(Exception e){
+			System.out.println("Oh Exception caught " + e );
+		}finally{
+			System.out.println("Close to DB happens here.. ");
+		}
+		
+		System.out.println("i'm other code in the world... ");
+	}
+}

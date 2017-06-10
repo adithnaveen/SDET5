@@ -1,0 +1,9 @@
+package com.fannie.day2;
+
+public class ExceptionEx3 {
+	public static void main(String[] args) {
+		
+		System.out.println(10/0);
+		
+	}
+}

@@ -1,0 +1,106 @@
+package com.fannie.generic;
+
+import static org.junit.Assert.*;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.fannie.generics.GenericMethods;
+import com.fannie.utility.Driver;
+import com.fannie.utility.WaitTypes;
+
+public class GenericExample {
+	WebDriver driver ; 
+	String baseURL;
+	WaitTypes waitTypes;
+	GenericMethods genericMethod;
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.setProperty(Driver.CHROME, Driver.CHROME_PATH);
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		driver = new ChromeDriver();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
+		baseURL = "http://webmail.sdettraining.com/Login.aspx";
+		waitTypes= new WaitTypes(driver);
+		genericMethod = new GenericMethods(driver);
+		driver.get(baseURL);
+	}
+
+
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(3000);
+		driver.quit();
+	}
+	
+	@Test
+	public void test() 
+		throws Exception{
+		
+		// for email
+		genericMethod.getElement("ctl00_MPH_txtUserName", "id")
+			.sendKeys("cohort312@sdettraining.com");
+		// password 
+		genericMethod.getElement("ctl00_MPH_txtPassword", "id")
+			.sendKeys("Hexaware03!");
+		
+		// click submit 
+		genericMethod.getElement("btnLogin", "id").click();
+	
+		
+		
+		
+		Thread.sleep(2000);
+		
+		
+		driver.navigate().refresh();
+		
+		driver.navigate().forward();
+		Thread.sleep(2000);
+		
+		WebElement calendarAck =
+				genericMethod.getElement("ctl00_MPH_calendarToday__Label", "id");
+			
+		System.out.println(calendarAck.getText());
+
+		
+		
+//		Assert.assertEquals("Testing for Asserting Calendar", "", "");
+		
+		
+	}
+
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

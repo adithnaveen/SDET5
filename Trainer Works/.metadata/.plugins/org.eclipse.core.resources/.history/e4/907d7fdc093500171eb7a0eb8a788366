@@ -1,0 +1,20 @@
+package com.fannie.day2;
+
+public class ExceptionEx3 {
+	
+	public static void checkCreditScore(int cs, String name){
+		if(cs < 400){
+			// throw an exception 
+			// 
+		}
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+	
+		
+		
+	}
+}

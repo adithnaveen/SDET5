@@ -1,0 +1,56 @@
+package com.fannie.generic;
+
+import static org.junit.Assert.*;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.fannie.utility.Driver;
+
+public class ImplicitExplicitWaitTest {
+	WebDriver driver ; 
+	String baseURL;
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.setProperty(Driver.CHROME, Driver.CHROME_PATH);
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		driver = new ChromeDriver();
+	    // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
+		baseURL = "http://tasyah.com/";
+		driver.get(baseURL);
+	}
+
+
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(3000);
+		driver.quit();
+	}
+	
+	@Test
+	public void test() {
+		driver.findElement(By.xpath("//*[@id=\"Menu_Wmt3OMY3\"]/nav/ul/li[1]/a/span"))
+				.click();
+		
+		driver.findElement(By.id("input-email")).sendKeys("testing@tasyah.com");
+		driver.findElement(By.id("input-password")).sendKeys("testing");
+		
+		driver.findElement(By.xpath("//*[@id=\"System_nyHsmShk\"]/div/div[2]/div/form/div/div[2]/input"))
+			.click();
+		
+	}
+
+}

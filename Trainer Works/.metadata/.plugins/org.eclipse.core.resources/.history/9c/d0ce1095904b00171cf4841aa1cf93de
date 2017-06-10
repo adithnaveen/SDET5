@@ -1,0 +1,21 @@
+package com.fannie.generic;
+
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+public class ScreenShot {
+	
+
+	public void takeScreenShot(String fileName){
+	// capture Screen shot 
+	String path ="C:\\Users\\Lenovo\\Desktop\\";
+	String fileName = "sample.png";
+	File file =  ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(file, new File(path+fileName));
+	
+	Thread.sleep(1000);
+	}
+}
