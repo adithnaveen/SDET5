@@ -1,0 +1,46 @@
+  <html>
+    <head>
+        <script type="text/javascript">
+        // function is class here 
+            function Person(pid, pname){
+                this.pid = pid;
+                this.pname = pname;
+
+                var securefunction = function(){
+                    console.log("This is a secure Function");
+                }
+                
+                // are called previlleged methods 
+                this.callSecure = function(){
+                    console.log("I cal call secure");
+                    securefunction();
+                }
+            }
+
+            Person.prototype.display = function(){
+                console.log(this.pid);
+                console.log(this.pname);
+            }
+
+            Person.prototype.getInUpper = function(){
+                return this.pname.toUpperCase();
+            }
+
+        </script>
+    </head>
+
+    <body>
+      <script type="text/javascript">
+        p = new Person(101, "Deepthy");
+
+        p.display();
+        console.log(p.getInUpper())
+        // this doesnot work since it is defined privat e
+        // prefixed with var 
+        // p.securefunction();
+
+        p.callSecure();
+        
+        </script>
+    </body>
+ </html>

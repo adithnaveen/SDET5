@@ -1,0 +1,21 @@
+ <html>
+    <head>
+        <script type="text/javascript">
+        function fuAddTwoNumbers(){
+            // by default prompt will return the string 
+            // to as integer we have to do parseInt 
+            val1 = parseInt(prompt("Enter first  number", "10"))
+            val2 = parseInt(prompt("Enter second number " , "20"))
+
+            alert("Result " + (val1 + val2));
+        }
+        </script>
+
+    </head>
+
+    <body>
+      
+        <input type="button" onclick="fuAddTwoNumbers()"
+            value="Add" />
+    </body>
+ </html>

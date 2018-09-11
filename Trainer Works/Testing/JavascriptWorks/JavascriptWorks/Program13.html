@@ -1,0 +1,23 @@
+  <html>
+   <head>
+        
+   </head>
+
+    <body bgcolor="cyan">
+       <p>FannieMae Testing</p>
+       
+
+       <script type="text/javascript">
+            var ePara = document.getElementsByTagName("p")[0];
+            // <b></b>
+            var boldElement = document.createElement("b");
+            // New Text 
+            var textElemnet = document.createTextNode("New Text");
+            // <b>New Text </b>
+            boldElement.appendChild(textElemnet);
+
+           // document.body.appendChild(boldElement);
+           document.body.insertBefore(boldElement, ePara);
+       </script>
+    </body>
+ </html>

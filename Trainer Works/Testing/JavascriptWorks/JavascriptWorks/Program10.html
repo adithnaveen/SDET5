@@ -1,0 +1,54 @@
+  <html>
+    <head>
+        <script type="text/javascript">
+        function Person(id, name){}
+        function fnArray(){
+            arr = new Array(3); 
+
+            arr[0] = 100; 
+            arr[1] = 200;
+            arr[2] = 300;
+            arr[3] = new Object();
+            arr[4] = new Person(101, 'harry');
+            
+            console.log(arr);
+            console.log(arr.length);
+
+            for(temp in arr){
+                console.log(arr[temp]);
+            }
+        }
+
+        function fnArray1(){
+            arr = new Array("sun", "mon", "tue", "wed");
+
+            console.log(arr);
+
+            arr.push("Thu");
+            console.log(arr);
+
+            arr.pop();
+            arr.pop();
+            console.log(arr);
+
+            arr.unshift("SAT");
+            console.log(arr);
+
+            arr.shift();
+            console.log(arr);
+
+            arr.splice(1, 1, "HELLO", "TEST");
+            console.log(arr);
+
+            document.write("<h1>hello this is from js")
+        }
+        </script>
+    </head>
+
+    <body>
+
+      <script type="text/javascript">
+        fnArray1();  
+    </script>
+    </body>
+ </html>
